@@ -77,7 +77,7 @@ SpaceK/
 
 📝 **Tema:** Desenvolvimento de um jogo de plataforma 2D em Python com Pygame Zero  
 
-⏱ **Duração sugerida:** 4 a 6 módulos (dependendo do ritmo)  
+⏱ **Duração sugerida:** 4 a 6 módulos   
 🛠 **Ferramentas:** Python 3, Pygame Zero, VS Code / Thonny  
 📌 **Pré-requisitos:** Noções básicas de Python (variáveis, loops, condicionais, funções)  
 
