@@ -1,165 +1,248 @@
 # SpaceK-Platformer
-2D space platformer developed in Python using Pygame Zero.
 
+![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-green)
+![Licença](https://img.shields.io/badge/licen%C3%A7a-MIT-green)
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
+![Pygame Zero](https://img.shields.io/badge/Pygame%20Zero-1.2+-006400)
 
-🚀 SpaceK
+Jogo de plataforma 2D com temática espacial, inspirado em Mario, desenvolvido em **Python** com a biblioteca **Pygame Zero**. O jogador controla um astronauta que precisa atravessar plataformas e desviar de inimigos alienígenas para concluir as fases.
 
-Um jogo de plataforma espacial, inspirado em Mario, desenvolvido em Python com Pygame Zero.
-O jogador controla um astronauta que precisa atravessar plataformas e evitar inimigos alienígenas para chegar ao final das fases.
+O repositório contém o jogo principal e uma versão reduzida (mini-jogo), além de um plano de aula completo que utiliza o projeto como base para o ensino de desenvolvimento de jogos em Python.
 
-📌 Requisitos Atendidos
-📚 Bibliotecas utilizadas
+---
 
-pgzero
+## Sobre o projeto
 
-pygame.Rect
+O SpaceK foi concebido para unir um produto final jogável a um material didático completo. A escolha do **Pygame Zero** se justifica por oferecer uma API simplificada sobre o Pygame, reduzindo a verbosidade do código de inicialização e permitindo que o foco recaia sobre os conceitos centrais do desenvolvimento de jogos: o ciclo de atualização, a renderização, a física básica e a detecção de colisões.
 
-random
+---
 
-🎮 Gênero
+## Versões do jogo
 
-Platformer
+O repositório disponibiliza duas versões:
 
-⚙️ Funcionalidades implementadas
+| Versão | Descrição |
+|--------|-----------|
+| **SpaceK (completo)** | Jogo principal, com menu, múltiplas fases, inimigos, sistema de pontuação e progressão. |
+| **SpaceK Mini** | Versão simplificada, ideal para introdução aos conceitos básicos do Pygame Zero e como ponto de partida para iniciantes. |
 
-Menu principal com botões clicáveis:
+---
 
-Iniciar Jogo
+## Bibliotecas utilizadas
 
-Sair
+| Biblioteca | Descrição |
+|------------|-----------|
+| [Pygame Zero](https://pygame-zero.readthedocs.io/) | Framework simplificado para desenvolvimento de jogos 2D em Python |
+| [Pygame](https://www.pygame.org/) | Biblioteca base utilizada internamente pelo Pygame Zero, usada para `pygame.Rect` |
+| `random` | Módulo padrão do Python para geração de valores aleatórios |
 
-Duas fases jogáveis
+---
 
-Jogador com movimento, pulo e gravidade
+## Funcionalidades implementadas
 
-Inimigos que patrulham seus territórios
+- Menu principal com botões clicáveis (Iniciar Jogo, Sair)
+- Duas fases jogáveis com complexidade progressiva
+- Personagem com movimentação, pulo e gravidade
+- Inimigos com comportamento de patrulha em territórios definidos
+- Sistema de colisão entre jogador, plataformas e inimigos
+- Estrutura orientada a objetos para jogador e inimigos
+- Código modularizado e organizado por responsabilidades
 
-Colisão entre jogador, plataformas e inimigos
-🎮 Como Jogar
+---
 
-Mover:
+## Controles e jogabilidade
 
-Tecla A ou Seta Esquerda → Esquerda
+**Movimentação**
 
-Tecla D ou Seta Direita → Direita
+- `A` ou `Seta Esquerda` — mover para a esquerda
+- `D` ou `Seta Direita` — mover para a direita
+- `Barra de Espaço` — pular
 
-Pular:
+**Objetivo**
 
-Barra de Espaço
+- Alcançar o lado direito da tela para concluir a fase
+- Desviar dos inimigos e evitar quedas no vazio
 
-Objetivo:
+---
 
-Alcance o lado direito da tela para passar de fase
+## Requisitos
 
-Evite inimigos e não caia no vazio
+- **Python 3.10 ou superior**
+- Bibliotecas: `pygame` e `pgzero`
 
-💻 Como Executar
-Pré-requisitos
+### Instalação das dependências
 
-Python 3.10 ou superior
-
-Instalar dependências:
+```bash
 python -m pip install --upgrade pip
 pip install pygame pgzero
+```
 
-Rodar o jogo
+Recomenda-se o uso de um ambiente virtual (`venv`) para isolar as dependências:
 
-No terminal (CMD ou PowerShell), vá até a pasta onde está o código e execute:
-python -m pgzero spaceK.py
-
-📂 Estrutura do Projeto
-SpaceK/
-│── spaceK.py       # Código principal do jogo
-│── README.md       # Documentação do projeto
-│── sounds/         # Pasta reservada para efeitos sonoros e músicas
-
-# 🚀 Plano de Aula – SpaceK
-
-📝 **Tema:** Desenvolvimento de um jogo de plataforma 2D em Python com Pygame Zero  
-
-⏱ **Duração sugerida:** 4 a 6 módulos   
-🛠 **Ferramentas:** Python 3, Pygame Zero, VS Code / Thonny  
-📌 **Pré-requisitos:** Noções básicas de Python (variáveis, loops, condicionais, funções)  
+```bash
+python -m venv venv
+# Ativação no Windows
+venv\Scripts\activate
+# Ativação no Linux/macOS
+source venv/bin/activate
+```
 
 ---
 
-## 🎯 Objetivos de Aprendizagem
-- Entender a estrutura de um jogo (`update()`, `draw()`, estados de jogo).  
-- Implementar física simples: gravidade, pulo e colisão.  
-- Criar interatividade com teclado.  
-- Trabalhar com múltiplos objetos (inimigos, plataformas, power-ups).  
-- Adicionar efeitos visuais e sonoros.  
-- Organizar o código em funções e classes.  
-- Realizar testes e depuração.  
+## Como executar
+
+No terminal, acesse o diretório do projeto e execute:
+
+```bash
+# Jogo principal
+pgzrun spaceK.py
+
+# Versão mini
+pgzrun spaceK_mini.py
+```
 
 ---
 
-## 📚 Estrutura de Módulos
+## Estrutura do repositório
 
-### 📘 Módulo 1 – Primeiros Passos com Pygame Zero
-- **Conceitos:** `update()`, `draw()`, variáveis globais.  
-- **Atividades:**  
-  - Instalar dependências  
-  - Rodar `spaceK.py`  
-  - Alterar `WIDTH` e `HEIGHT`  
-  - Criar sprite simples em movimento  
-
----
-
-### 🚀 Módulo 2 – O Astronauta em Ação
-- **Conceitos:** posição, velocidade, gravidade, colisão.  
-- **Atividades:**  
-  - Implementar pulo  
-  - Limitar velocidade de queda  
-  - Ajustar a câmera do jogo  
+```
+SpaceK-Platformer/
+├── README.md
+├── spaceK.py              # Jogo principal
+├── spaceK_mini.py         # Versão simplificada
+├── images/                # Sprites e elementos visuais
+└── sounds/                # Efeitos sonoros e trilhas
+```
 
 ---
 
-### 👾 Módulo 3 – Inimigos e Power-ups
-- **Conceitos:** uso de classes, métodos (`__init__`, `update`, `draw`).  
-- **Atividades:**  
-  - Alterar atributos de inimigos  
-  - Criar power-up personalizado  
+## Plano de aula
+
+O projeto SpaceK foi estruturado também como **material didático** para o desenvolvimento de jogos 2D em Python com Pygame Zero. O plano abaixo organiza o conteúdo em módulos progressivos.
+
+**Duração sugerida:** 4 a 6 módulos
+**Ferramentas:** Python 3, Pygame Zero, VS Code ou Thonny
+**Pré-requisitos:** noções básicas de Python (variáveis, laços, condicionais, funções)
+
+### Objetivos de aprendizagem
+
+- Compreender a estrutura de um jogo (`update()`, `draw()`, estados de jogo)
+- Implementar física simples: gravidade, pulo e detecção de colisão
+- Construir interatividade por meio do teclado
+- Trabalhar com múltiplos objetos (inimigos, plataformas, power-ups)
+- Integrar efeitos visuais e sonoros
+- Organizar o código em funções e classes
+- Realizar testes, depuração e refinamento
 
 ---
 
-### 💥 Módulo 4 – Lasers, Partículas e Sons
-- **Conceitos:** projéteis, partículas, integração de áudio.  
-- **Atividades:**  
-  - Modificar velocidade/cor de lasers  
-  - Adicionar partículas  
-  - Testar sons do jogo  
+### Módulo 1 — Primeiros passos com Pygame Zero
+
+**Conceitos:** funções `update()` e `draw()`, variáveis globais, ciclo do jogo
+
+**Atividades:**
+
+- Instalação das dependências
+- Execução do arquivo `spaceK.py`
+- Alteração das constantes `WIDTH` e `HEIGHT`
+- Criação de um sprite simples em movimento
 
 ---
 
-### 🖥️ Módulo 5 – Interface e Estados do Jogo
-- **Conceitos:** menus, HUD, pontuação, transições.  
-- **Atividades:**  
-  - Alterar cores/textos de botões  
-  - Adicionar botão ao menu  
-  - Personalizar HUD  
+### Módulo 2 — O astronauta em ação
+
+**Conceitos:** posição, velocidade, gravidade, detecção de colisão
+
+**Atividades:**
+
+- Implementação do mecanismo de pulo
+- Limitação da velocidade de queda
+- Ajuste da câmera do jogo
 
 ---
 
-### 🎮 Módulo 6 – Refinamento e Desafios Finais
-- **Conceitos:** níveis, balanceamento, otimização.  
-- **Atividades:**  
-  - Editar fases  
-  - Criar inimigo novo  
-  - Implementar sistema de vidas extras  
-  - Criar boss simples  
+### Módulo 3 — Inimigos e power-ups
+
+**Conceitos:** programação orientada a objetos, métodos `__init__`, `update` e `draw`
+
+**Atividades:**
+
+- Modificação dos atributos dos inimigos
+- Criação de um power-up personalizado
 
 ---
 
-## 📂 Recursos Disponíveis
-- **Código-fonte:** `spaceK.py`  
-- **Documentação:** [Pygame Zero Docs](https://pygame-zero.readthedocs.io/)  
-- **Sprites e sons:** disponíveis na pasta `sounds/`  
-- **Guia prático:** este README serve como trilha de aprendizado  
+### Módulo 4 — Lasers, partículas e sons
 
+**Conceitos:** projéteis, sistemas de partículas, integração de áudio
 
+**Atividades:**
 
+- Alteração de velocidade e cor dos lasers
+- Adição de efeitos de partículas
+- Integração de sons ao jogo
 
-Estrutura em classes para jogador e inimigos
+---
 
-Código organizado e independente
+### Módulo 5 — Interface e estados do jogo
+
+**Conceitos:** menus, HUD, pontuação, transições entre telas
+
+**Atividades:**
+
+- Personalização de cores e textos dos botões
+- Adição de novos itens ao menu
+- Customização da HUD (interface durante o jogo)
+
+---
+
+### Módulo 6 — Refinamento e desafios finais
+
+**Conceitos:** desenho de níveis, balanceamento, otimização
+
+**Atividades:**
+
+- Edição e criação de novas fases
+- Implementação de um novo tipo de inimigo
+- Criação de um sistema de vidas extras
+- Implementação de um chefe (boss) simples
+
+---
+
+## Conceitos aplicados
+
+| Área | O que o projeto demonstra |
+|------|---------------------------|
+| **Python** | Programação orientada a objetos, modularização, escopo de variáveis |
+| **Pygame Zero** | Ciclo de atualização e renderização, manipulação de sprites, captura de eventos |
+| **Física de jogos** | Gravidade, velocidade, detecção de colisão por retângulos |
+| **Arquitetura de jogos** | Estados de jogo, separação entre lógica e renderização |
+| **Design de níveis** | Posicionamento de plataformas, inimigos e elementos interativos |
+
+---
+
+## Recursos complementares
+
+- [Documentação oficial do Pygame Zero](https://pygame-zero.readthedocs.io/)
+- [Documentação do Pygame](https://www.pygame.org/docs/)
+- Repositório original: [SpaceK-Platformer](https://github.com/mariannarossim/SpaceK-Platformer)
+
+---
+
+## Sobre o material
+
+Todo o conteúdo deste repositório é de autoria própria, podendo ser utilizado tanto como referência para projetos de jogos quanto como base para o ensino de desenvolvimento de jogos em Python. O material pode ser utilizado, adaptado e compartilhado, desde que mantidos os devidos créditos.
+
+---
+
+## Autora
+
+**Marianna Rossi**
+
+[GitHub](https://github.com/mariannarossim)
+
+---
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
